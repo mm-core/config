@@ -3,6 +3,15 @@ import { existsSync, readdirSync } from 'fs';
 import { join } from 'path';
 import { Region } from 'minio';
 
+interface IRouter {
+	url: string;
+	method: 'get' | 'post' | 'all' | 'put' | 'delete';
+	service: string;
+	data: {
+		[param: string]: string | number | boolean;
+	};
+}
+
 interface IProject {
 	wx: {
 		getopenid: boolean;
@@ -21,14 +30,8 @@ interface IProject {
 	};
 	favicon: string;
 
-	routers: {
-		url: string;
-		method: 'get' | 'post' | 'all' | 'put' | 'delete';
-		service: string;
-		data: {
-			[param: string]: string | number | boolean;
-		};
-	}[];
+	filters: IRouter[];
+	routers: IRouter[];
 	push_appid: string;
 	push_secret: string;
 	jobs: {
