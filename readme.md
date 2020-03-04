@@ -1,1 +1,3 @@
-# Base
+# Configuration
+
+Get configuration of mm.json

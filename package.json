@@ -1,7 +1,7 @@
 {
-	"name": "@mmstudio/base",
+	"name": "@mmstudio/config",
 	"version": "1.0.0",
-	"description": "$desc",
+	"description": "configuration",
 	"scripts": {
 		"test": "tsc && ava ./test.js",
 		"watch": "tsc -w & ava --watch ./test.js",
@@ -35,14 +35,19 @@
 		}
 	],
 	"license": "MIT",
-	"dependencies": {},
+	"peerDependencies": {
+		"minio": "*"
+	},
 	"devDependencies": {
+		"@types/minio": "latest",
+		"@types/node": "latest",
 		"@typescript-eslint/eslint-plugin": "latest",
 		"@typescript-eslint/parser": "latest",
 		"ava": "latest",
 		"eslint": "latest",
 		"eslint-config-prettier": "latest",
 		"eslint-plugin-import": "latest",
+		"minio": "latest",
 		"typescript": "next"
 	}
 }
