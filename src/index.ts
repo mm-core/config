@@ -24,10 +24,6 @@ interface IProject {
 		apikey: string;
 		appsecret: string;
 	};
-	secure: {
-		redirect: string;
-		ignore: string[];
-	};
 	favicon: string;
 
 	filters: IRouter[];
