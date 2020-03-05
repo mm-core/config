@@ -3,5 +3,11 @@ tests/
 src/
 tsconfig.json
 mm.json
+.eslintignore  
+.eslintrc.json  
+.gitignore  
+.npmignore  
+.npmrc  
+.yarnrc
 *.sh
 *.log
