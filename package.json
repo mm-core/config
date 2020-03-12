@@ -1,6 +1,6 @@
 {
 	"name": "@mmstudio/config",
-	"version": "1.0.202003050911",
+	"version": "1.0.202003120900",
 	"description": "configuration",
 	"scripts": {
 		"test": "tsc && ava ./tests/*.js",
