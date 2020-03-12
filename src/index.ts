@@ -101,7 +101,6 @@ const { debug, cwd } = (() => {
 		cwd: process.cwd(),
 		debug: true
 	};
-
 })();
 
 const proj = require(join(cwd, 'mm.json')) as IProject;
@@ -111,7 +110,7 @@ if (debug) {
 	proj.acma = 150000;
 }
 
-const conf = {
+const conf: IAdmin & IProject & { cwd: string; debug: boolean; } = {
 	...proj,
 	...config,
 	...{
