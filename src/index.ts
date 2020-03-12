@@ -75,6 +75,7 @@ interface IAdmin {
 	};
 	push_appid: string;
 	push_secret: string;
+	doccode: string;
 	[key: string]: unknown;
 }
 
