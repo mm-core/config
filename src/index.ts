@@ -43,6 +43,18 @@ interface IProject {
 	[key: string]: unknown;
 }
 
+interface IDBConfigPostgres {
+	type: 'postgres';
+	source: string;
+}
+
+interface IDBConfigMysql {
+	type: 'mariadb' | 'mysql';
+	source: string | string[];
+}
+
+type IDBConfig = IDBConfigPostgres | IDBConfigMysql;
+
 interface IAdmin {
 	timeout: number;
 	mqtt: string;
@@ -50,11 +62,9 @@ interface IAdmin {
 	acao: string;
 	acma: number;
 	dbs: {
-		[db: string]: {
-			type: 'postgres' | 'mariadb';
-			source: string | string[];
-		};
+		[db: string]: IDBConfig;
 	};
+	db: IDBConfig,
 	redis: {
 		url: string;
 		expiration: number;
