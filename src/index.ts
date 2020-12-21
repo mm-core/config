@@ -40,6 +40,6 @@ const conf = {
 		cwd,
 		debug
 	}
-};
+} as Record<string, unknown> & { cwd: string; debug: boolean; };
 
 export default conf;
